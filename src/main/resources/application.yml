@@ -1,0 +1,24 @@
+server:
+    port: 8080
+
+spring:
+    ai:
+        openai:
+            api-key: ${OPENROUTER_API_KEY}
+            chat:
+                options:
+                    model: gpt-4o
+
+    datasource:
+        url: jdbc:mysql://localhost:3306/your_database_name?createDatabaseIfNotExist=true
+        username: root
+        password: admin123
+        driver-class-name: com.mysql.cj.jdbc.Driver
+
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+        properties:
+            hibernate:
+                format_sql: true
